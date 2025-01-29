@@ -6,3 +6,7 @@ This is the website for the Digital IC Course for members of the ICIL Lab at SCA
 
 
 This website built by [Vitepress](https://vitepress.dev/).
+
+## build
+npm add -D vitepress
+npm run docs:build

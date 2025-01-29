@@ -9,7 +9,7 @@
 ## 前言
 
 本讲义内容广泛，但各部分较为简明，旨在帮助你快速掌握嵌入式开发、计算机和数字电路等领域的基础知识。通过下图，你可以直观地了解讲义所涉及的主要内容。
-![2024-10-19T15:25:51.png][1]
+![学习内容图](/images/handout/学习内容图.png)
 在学习过程中，我们将使用鸭蛋FPGA开发平台，运行基于RISC-V架构的Yadan CPU，模拟单片机环境。你将使用C语言或Arduino编写程序，控制开发板上的LED灯，并最终设计数字电路，实现对LED灯的控制。
 
 <br>在每次集中培训前，你需要提前完成相应的预学习任务。同时，我们鼓励你根据讲义提前完成培训的所有内容。
@@ -25,7 +25,7 @@
 You tell me.
 
 ### 具体内容
-- 查看[你缺失的那门计算机课][2]网站，学习基础篇和软件篇并完成练习。
+- 查看[你缺失的那门计算机课](https://www.criwits.top/missing/afterwords.html)网站，学习基础篇和软件篇并完成练习。
 - 自行寻找教程复习 C 语言语法。
 
 ### 验收标准
@@ -39,14 +39,14 @@ You tell me.
 1h
 
 ### 具体内容
-- 查看[鸭蛋文档][3]，完成第三章。
+- 查看[鸭蛋文档](https://docs.yadanboard.com/zh-cn/latest/chap3.html##tangdynasty)，完成第三章。
 
 ### 注意事项
-- 务必使用 [TD5.6.2][4] 版本
+- 务必使用 [TD5.6.2](https://pan.200502.xyz/d/onedrive/%E5%A4%A7%E5%AD%A6/%E9%B8%AD%E8%9B%8B%E8%B5%84%E6%96%99/TD_RELEASE_March2023_r5.6.2_71036_64bit.msi?sign=t8j-neyq_q0OVD9WhKCOWKdYHZqvk0D3YjZPBl1AHBM=:0) 版本
 - 将 license 文件放到 `C:\Anlogic\TD5.6.2\license`
-- Arduino IDE 使用 [2.3.3][5] 版本
+- Arduino IDE 使用 [2.3.3](https://www.arduino.cc/en/software) 版本
 - 在 Arduino 开发板管理器中下载 Yadan 的开发环境时，会遇到报错，自行 STFW（Search The Fucking Web）
-- RISC-V GCC 工具链使用 [v10.1.0-1.1][6] 版本
+- RISC-V GCC 工具链使用 [v10.1.0-1.1](https://github.com/xpack-dev-tools/riscv-none-embed-gcc-xpack/releases/download/v10.1.0-1.1/xpack-riscv-none-embed-gcc-10.1.0-1.1-win32-x64.zip) 版本
 
 ### 验收标准
 无
@@ -55,7 +55,7 @@ You tell me.
 
 ## 程序是如何从C语言编译成计算机可以理解的指令？
 
-如果你想进一步了解这方面的内容，可以阅读[《深入理解计算机系统》][7]。
+如果你想进一步了解这方面的内容，可以阅读[《深入理解计算机系统》](https://pan.200502.xyz/d/onedrive/%E4%B9%A6/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F.pdf?sign=zrr6RxW5VCsutKPffBjjE3KuOupgY-1_8PIgO356I7Q=:0)。
 
 C语言是一种编译型语言，它需要通过编译器将源代码转换为可执行的机器代码。编译过程通常分为以下几个阶段：
 
@@ -277,12 +277,12 @@ C语言是一种编译型语言，它需要通过编译器将源代码转换为�
 1.5h
 
 ### 具体内容
-- 查看[鸭蛋文档第四章][8]，完成第四章。
+- 查看[鸭蛋文档第四章](https://docs.yadanboard.com/zh-cn/latest/chap4.html##)，完成第四章。
 
 ### 注意事项
-- 使用 Yadan SOC，你需要下载Yadan SOC的[工程文件][9]，自行使用TD生成比特流文件并且烧录。
+- 使用 Yadan SOC，你需要下载Yadan SOC的[工程文件](https://gitee.com/verimake/yadansoc/)，自行使用TD生成比特流文件并且烧录。
 - 自行 STFW，安装 Python 环境
-- 在 4.3.2 编写代码中，你的代码需要在[样例空工程][10]中进行编写
+- 在 4.3.2 编写代码中，你的代码需要在[样例空工程](https://pan.200502.xyz/d/onedrive/%E5%A4%A7%E5%AD%A6/%E9%B8%AD%E8%9B%8B%E8%B5%84%E6%96%99/DemoProject_YADAN_with_download_program.zip?sign=5E_wj-BhPabuDWLyQ4S7y-H6gaqZ4V0v43om3Hv07Sk=:0)中进行编写
 - 鸭蛋文档中的4.3.5, 4.3.6不需要阅读
 
 ### 验收标准
@@ -296,15 +296,15 @@ C语言是一种编译型语言，它需要通过编译器将源代码转换为�
 <br>我们再来了解下串行通信的特点。串行通信是指数据在一条数据线上，一比特接一比特地按顺序传送的方式，这一点与并行通信是不同的。这里我们以传输一个字节（8位）数据为例，在并行通信中，一个字节的数据是在 8 条并行传输线上同时由源地传送到目的地；而在串行通信中，因为数据是在一条传输线上一位接一位地顺序传送的，所以一个字节的数据要分8次进行传送。如果我们以T为一个时间单位的话，那么并行通信发送一个字节的数据只需要1T的时间，而串行通信需要8T的时间，由此可以总结出串行通信的的特点：一是节省传输线，大大降低了使用成本，二是数据传送速度慢，这一点在大位宽的数据传输上尤为明显。综上可知，串行通信主要应用于长距离、低速率的通信场合。
 #### 接口定义
 UART的接线很简单，只需要连接两根线就可以发送数据
-![2024-10-26T10:21:45.png][11]
+![3128512590](/images/handout/3128512590.png)
 #### 数据格式
 <br>**起始位**：当不传输数据时，UART数据传输线通常保持高电压电平。若要开始数据传输，发送UART会将传输线从高电平拉到低电平并保持1个波特率周期。当接收UART检测到高到低电压跃迁时，便开始以波特率对应的频率读取数据帧中的位。 
 <br>**数据帧**：数据帧包含所传输的实际数据。如果使用奇偶校验位，数据帧长度可以是5位到8位。如果不使用奇偶校验位，数据帧长度可以是9位。在大多数情况下，数据以最低有效位优先方式发送。 
 <br>**奇偶校验**：奇偶性描述数字是偶数还是奇数。通过奇偶校验位，接收 UART 判断传输期间是否有数据发生改变。电磁辐射、不一致的波特率或长距离数据传输都可能改变数据位。接收 UART读取数据帧后，将计数值为1的位，检查总数是偶数还是奇数。如果奇偶校验位为0（偶数奇偶校验），则数据帧中的1或逻辑高位总计应为偶数。如果奇偶校验位为1（奇数奇偶校验），则数据帧中的1或逻辑高位总计应为奇数。当奇偶校验位与数据匹配时，UART认为传输未出错。但是，如果奇偶校验位为0，而总和为奇数，或者奇偶校验位为1，而总和为偶数，则UART认为数据帧中的位已改变。 
 <br>**停止位**：为了表示数据包结束，发送UART将数据传输线从低电压驱动到高电压并保持1到2位时间。 
-![2024-10-26T10:24:40.png][12]
+![2873905697](/images/handout/2873905697.png)
 #### 奇偶检验
-你可以阅读我的[文章][13]，详细了解如何通过奇偶检验来纠正数据传输中的错误。
+你可以阅读我的[文章](https://200502.xyz/2024/02/01/2024-1-19-1-31%E6%80%BB%E7%BB%93/)，详细了解如何通过奇偶检验来纠正数据传输中的错误。
 #### 波特率
 即每秒传输的位数(bit)。一般选波特率都会有9600，19200，115200等选项。其实就是每秒传输这么多个比特位数(bit)。两个设备需要约定好相同的波特率才能进行通讯。
 
@@ -318,7 +318,7 @@ GPIO（General Purpose Input/Output，通用输入/输出）是微控制器和�
 ### PWM
 <br>用于模拟信号控制的数字信号技术。通过调节脉冲信号的占空比，可以模拟输出连续的模拟电压。
 <br>下图是一个50%占空比的PWM波，假设他的高电压的时候是5V，那么50%占空比就可以等效成5V*50%=2.5V。
-![2024-10-26T11:56:08.png][14]
+![2827537704](/images/handout/2827537704.png)
 <br>通过PWM，我们可以简单的调整LED灯的亮度，电机的转速等。
 
 ---
@@ -331,7 +331,7 @@ GPIO（General Purpose Input/Output，通用输入/输出）是微控制器和�
 4h
 
 ### 具体内容
-- 完成[鸭蛋文档第五章实验一][15]
+- 完成[鸭蛋文档第五章实验一](https://docs.yadanboard.com/zh-cn/latest/chap5.html##arduino-ide-yadan-board)
 
 ### 注意事项
 - 你可能需要使用到GPIO引脚，查看鸭蛋文档1.1获取相关信息
@@ -344,7 +344,7 @@ GPIO（General Purpose Input/Output，通用输入/输出）是微控制器和�
 
 ## 最简单的CPU是怎样工作的？
 
-本章内容参考自南京大学计算机系统基础实验[1.2][16],[2.1][17]，以及CS61-C。<br>
+本章内容参考自南京大学计算机系统基础实验[1.2](https://ysyx.oscc.cc/docs/ics-pa/1.2.html),[2.1](https://ysyx.oscc.cc/docs/ics-pa/2.1.html)，以及CS61-C。<br>
 
 在我们日常使用的计算设备中，电脑的架构可以分为软件和硬件两大部分。在最上层，我们看到的是软件，例如大家常用的微信、浏览器等应用。这些应用软件运行在操作系统上，操作系统为它们提供了一个统一的运行环境。而对于一些简单的设备，如51单片机，它们可以直接运行C语言编译成的机器代码，无需操作系统的参与。
 
@@ -389,7 +389,7 @@ GPIO（General Purpose Input/Output，通用输入/输出）是微控制器和�
 1h
 
 ### 具体内容
-- 完成[鸭蛋文档第五章实验二][18]
+- 完成[鸭蛋文档第五章实验二](https://docs.yadanboard.com/zh-cn/latest/chap5.html##risc-v-gcc)
 
 ### 验收标准
 - 自己配置寄存器并使 LED 灯闪烁
@@ -454,8 +454,8 @@ You tell me.
 You tell me.
 
 ### 具体内容
-- 阅读[《数字设计和计算机体系结构》][19]第一到四章，学习数电知识和 Verilog 语言
-- 使用 USTC 的[Verilog OJ][20]练习 Verilog，根据自己情况选择完成，若有基础，可以直接挑选靠后的题目。
+- 阅读[《数字设计和计算机体系结构》](https://pan.200502.xyz/d/onedrive/%E4%B9%A6/%E6%95%B0%E5%AD%97%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%EF%BC%88%E5%8E%9F%E4%B9%A6%E7%AC%AC2%E7%89%88%EF%BC%89%20(%20etc.)%20(Z-Library).pdf?sign=YCyWjmcApDhmCxBpDHuYgYlOTv3ITLP3qs9uvLv_a0E=:0)第一到四章，学习数电知识和 Verilog 语言
+- 使用 USTC 的[Verilog OJ](https://verilogoj.ustc.edu.cn/oj/)练习 Verilog，根据自己情况选择完成，若有基础，可以直接挑选靠后的题目。
 - 【从电路设计的角度入门VerilogHDL】 https://www.bilibili.com/video/BV1PS4y1s7XW
 
 ### 验收标准
@@ -469,7 +469,7 @@ You tell me.
 4h
 
 ### 具体内容
-- 查看[文档][21]并完成。
+- 查看[文档](https://verimake.com/d/80-yadan-board-verilog-1)并完成。
 
 ### 验收标准
 - 使用 FPGA 成功点亮 LED 灯
@@ -482,7 +482,7 @@ You tell me.
 4h
 
 ### 具体内容
-- 查看[文档][22]并完成。
+- 查看[文档](https://verimake.com/d/115-yadan-board-verilog-2-pwm)并完成。
 
 ### 验收标准
 - FPGA 使用 PWM 成功点亮 LED 灯
@@ -495,7 +495,7 @@ You tell me.
 4h
 
 ### 具体内容
-- 查看[文档][23]并完成。
+- 查看[文档](https://verimake.com/d/146-yadan-board-verilog-3-ip-core-adc)并完成。
 
 ### 验收标准
 - FPGA 使用 PWM 成功点亮 LED 灯
@@ -508,7 +508,7 @@ You tell me.
 4h
 
 ### 具体内容
-- 查看[文档][24]并完成。
+- 查看[文档](https://verimake.com/d/149-yadan-board-verilog-4-uart)并完成。
 
 ::: info
 你已经学会了如何使用 FPGA 开发，现在可以尝试参加集创赛的数字设计赛道以及 FPGA 应用赛道。
@@ -528,7 +528,7 @@ You tell me.
 **∞**
 
 ### 具体内容
-- 一生一芯项目[主页][25]
+- 一生一芯项目[主页](https://ysyx.oscc.cc/)
 
 ---
 
@@ -540,30 +540,3 @@ You tell me.
 :::
 
 ---
-
-
-  [1]: https://200502.xyz/usr/uploads/2024/10/2764013689.png##vwid=308&vhei=485
-  [2]: https://www.criwits.top/missing/afterwords.html
-  [3]: https://docs.yadanboard.com/zh-cn/latest/chap3.html##tangdynasty
-  [4]: https://pan.200502.xyz/d/onedrive/%E5%A4%A7%E5%AD%A6/%E9%B8%AD%E8%9B%8B%E8%B5%84%E6%96%99/TD_RELEASE_March2023_r5.6.2_71036_64bit.msi?sign=t8j-neyq_q0OVD9WhKCOWKdYHZqvk0D3YjZPBl1AHBM=:0
-  [5]: https://www.arduino.cc/en/software
-  [6]: https://pan.200502.xyz/d/local/xpack-riscv-none-embed-gcc-10.1.0-1.1-win32-x64.zip?sign=GiW-eVIcvNFVrfsRCKfhbG5S5AGGlviN9EetWyzPgeY=:0
-  [7]: https://pan.200502.xyz/d/local/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F.pdf?sign=u4KBWOOWtkjbkgfXuHS4j4q7n29_XxY55k_eWJLGgU0=:0
-  [8]: https://docs.yadanboard.com/zh-cn/latest/chap4.html##
-  [9]: https://gitee.com/verimake/yadansoc/
-  [10]: https://pan.200502.xyz/d/onedrive/%E5%A4%A7%E5%AD%A6/%E9%B8%AD%E8%9B%8B%E8%B5%84%E6%96%99/DemoProject_YADAN_with_download_program.zip?sign=5E_wj-BhPabuDWLyQ4S7y-H6gaqZ4V0v43om3Hv07Sk=:0
-  [11]: https://200502.xyz/usr/uploads/2024/10/3128512590.png##vwid=732&vhei=177
-  [12]: https://200502.xyz/usr/uploads/2024/10/2873905697.png##vwid=838&vhei=277
-  [13]: https://200502.xyz/index.php/archives/236/
-  [14]: https://200502.xyz/usr/uploads/2024/10/2827537704.png##vwid=1047&vhei=786
-  [15]: https://docs.yadanboard.com/zh-cn/latest/chap5.html##arduino-ide-yadan-board
-  [16]: https://ysyx.oscc.cc/docs/ics-pa/1.2.html
-  [17]: https://ysyx.oscc.cc/docs/ics-pa/2.1.html
-  [18]: https://docs.yadanboard.com/zh-cn/latest/chap5.html##risc-v-gcc
-  [19]: https://pan.200502.xyz/d/local/%E6%95%B0%E5%AD%97%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.pdf?sign=riFPmgiOKk1leujtYb8VHTTnWimIBWTpuubEm4isRLk=:0
-  [20]: https://verilogoj.ustc.edu.cn/oj/
-  [21]: https://verimake.com/d/80-yadan-board-verilog-1
-  [22]: https://verimake.com/d/115-yadan-board-verilog-2-pwm
-  [23]: https://verimake.com/d/146-yadan-board-verilog-3-ip-core-adc
-  [24]: https://verimake.com/d/149-yadan-board-verilog-4-uart
-  [25]: https://ysyx.oscc.cc/
